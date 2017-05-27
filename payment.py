@@ -67,6 +67,9 @@ def send_invoice(seed_tuple):
             
     print("Invoice sent:")
     pprint(sent)
+    
+TOKEN = ""
+PAYMENT_PROVIDER_TOKEN = ""
                 
 bot = telepot.DelegatorBot(TOKEN, [
     (per_message(flavors=['chat']), call(send_invoice)),
