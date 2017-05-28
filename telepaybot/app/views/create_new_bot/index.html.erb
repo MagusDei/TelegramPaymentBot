@@ -64,19 +64,23 @@
 
 
 
-      <form action="/action_page.php">
+    <%= form_for :botstatus, url: create_new_bot_path do |f| %>
 
-    Name of the business:<br>
-
-    <input type="text" name="name" value=""><br>
-
-    API Token:<br>
-
-    <input type="text" name="token" value="">
-
-    <input type="submit" value="Submit">
-
-      </form> 
+    <p>
+        <%= f.label :name %><br/>
+        <%= f.text_field :name %>
+    </p>
+    
+    <p>
+        <%= f.label :token %><br/>
+        <%= f.text_field :token %>
+    </p>
+    
+    <p>
+        <%= f.submit %>
+    </p>
+    
+    <% end %>
 
       <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
 
