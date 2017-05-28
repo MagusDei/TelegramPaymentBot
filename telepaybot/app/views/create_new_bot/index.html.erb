@@ -1,117 +1,48 @@
-<!--DOCTYPE html-->
-
-<html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <title>Telagram</title>
-
-
-
-    <!-- Bootstrap -->
-
-      <script src="https://use.fontawesome.com/63c930c0bc.js"></script>
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-
-    <!--[if lt IE 9]>
-
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-
-    <![endif]-->
-
-  </head>
-
-  <body>
-
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-
           <div class="container">
-
-              <a class="navbar-brand">Telegram Payment Channel Creation Page</a>
-
+              <a class="navbar-brand">Televendor</a>
           </div>
-
       </div>
+      
+      <div class="container">
+        <div class="jumbotron text-center">
+            
+            <%= form_tag do %>
 
-      <p>
-
-          Moi!
-
-
-
-          Hello there! This service will help you to accept payments from Telegram messenger users.
-
-          Just type in your business's name and API token:
-
-      </p>
-
-
-
-    <%= form_tag do %>
-
-    <p>
-        <%= label_tag(:name, "Botname:") %><br/>
-        <%= text_field_tag(:name) %>
-    </p>
-    
-    <p>
-        <%= label_tag(:token, "API Token:") %><br/>
-        <%= text_field_tag(:token) %>
-    </p>
-    
-    <p>
-        <%= submit_tag("Submit") %>
-    </p>
-    
-    <% end %>
-
+            <p>
+            <div class="col-sm-10">
+                <%= label_tag(:token, "API Token:") %><br/>
+                <%= text_field_tag(:token) %>
+            </div>
+            </p>
+            
+            <p>
+            <div class="col-sm-10">
+                <%= label_tag(:paytoken, "Payment Token:") %><br/>
+                <%= text_field_tag(:paytoken) %>
+            </div>
+            </p>
+            
+            <p>
+                <%= submit_tag("Submit") %>
+            </p>
+            
+            <% end %>
+        </div>
+      </div>
+      
       <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-
           <div class="container">
-
               <div class="navbar-text pull-left">
-
                 <p>© Telepaybot 2017</p>
-
               </div>
-
           </div>
-
           <div class="navbar-text pull-right">
-
               <a href='#'><i class="fa fa-telegram fa-spin fa-3x fa-fw"></i></a>
-
           </div>
-
       </div>
-
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-
     <script src="js/bootstrap.min.js"></script>
-
-  </body>
-
-</html>
