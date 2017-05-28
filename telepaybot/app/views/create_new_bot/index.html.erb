@@ -8,24 +8,24 @@
         <div class="jumbotron text-center">
             
             <%= form_tag do %>
+                <h1>Hello there!</h1>
+                <p>This service will help you to accept payments from Telegram messenger users.</p>
 
-            <p>
+            <div class="form-group">
             <div class="col-sm-10">
-                <%= label_tag(:token, "API Token:") %><br/>
-                <%= text_field_tag(:token) %>
+                <%# label_tag(:token, "API Token:") %>
+                <% text_field_tag(:token, nil, placeholder: 'API Token') %>
             </div>
-            </p>
+            </div>
             
-            <p>
+            <div class="form-group">
             <div class="col-sm-10">
-                <%= label_tag(:paytoken, "Payment Token:") %><br/>
-                <%= text_field_tag(:paytoken) %>
+                <%# label_tag(:paytoken, "Payment Token:") %>
+                <%= text_field_tag(:paytoken, nil, placeholder: 'Payment Token') %>
             </div>
-            </p>
+            </div>
             
-            <p>
-                <%= submit_tag("Submit") %>
-            </p>
+                <%= submit_tag("Confirm"), :class => "btn btn-success" %>
             
             <% end %>
         </div>
