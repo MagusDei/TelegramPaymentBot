@@ -64,20 +64,20 @@
 
 
 
-    <%= form_tag, url: create_new_bot_index_path do |f| %>
+    <%= form_tag do %>
 
     <p>
-        <%= f.label :name %><br/>
-        <%= f.text_field :name %>
+        <%= label_tag(:name, "Botname:") %><br/>
+        <%= text_field_tag(:name) %>
     </p>
     
     <p>
-        <%= f.label :token %><br/>
-        <%= f.text_field :token %>
+        <%= label_tag(:token, "API Token:") %><br/>
+        <%= text_field_tag(:token) %>
     </p>
     
     <p>
-        <%= f.submit %>
+        <%= submit_tag("Submit") %>
     </p>
     
     <% end %>
