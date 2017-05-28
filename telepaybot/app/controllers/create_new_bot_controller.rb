@@ -3,6 +3,6 @@ class CreateNewBotController < ApplicationController
   end
   
   def create
-    command "docker run python-telebot2 "+params[:token]
+    command "docker run python-telebot2 "+params[:botstatus_token]
   end
 end
