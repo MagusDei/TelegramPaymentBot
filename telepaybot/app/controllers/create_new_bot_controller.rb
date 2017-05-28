@@ -3,6 +3,6 @@ class CreateNewBotController < ApplicationController
   end
   
   def create
-    system "docker run python-telebot2 "+params[:token]
+    system "docker run python-telepaybot3 "+params[:token]+" "+params[:paytoken]
   end
 end
