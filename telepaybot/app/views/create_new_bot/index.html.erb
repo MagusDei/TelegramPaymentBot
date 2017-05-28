@@ -14,14 +14,14 @@
             <div class="form-group">
             <div class="col-sm-10">
                 <%# label_tag(:token, "API Token:") %>
-                <% text_field_tag(:token, nil, placeholder: 'API Token') %>
+                <%= text_field_tag :token, nil, placeholder: 'API Token', :class => "form-control" %>
             </div>
             </div>
             
             <div class="form-group">
             <div class="col-sm-10">
                 <%# label_tag(:paytoken, "Payment Token:") %>
-                <%= text_field_tag(:paytoken, nil, placeholder: 'Payment Token') %>
+                <%= text_field_tag :paytoken, nil, placeholder: 'Payment Token', :class => "form-control" %>
             </div>
             </div>
             
