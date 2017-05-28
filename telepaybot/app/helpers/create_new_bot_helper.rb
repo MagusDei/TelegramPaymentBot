@@ -1,0 +1,2 @@
+module CreateNewBotHelper
+end
